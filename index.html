@@ -66,11 +66,16 @@
     /* Features/cards */
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: 1fr;
       gap: 2rem;
       max-width: 1000px;
       margin: 2rem auto;
       padding: 0 1rem;
+    }
+    @media (min-width: 768px) {
+      .features {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
     .card {
       background: #fff;
@@ -115,20 +120,16 @@
 
   <section class="features">
     <div class="card">
-      <h3>Transfer Learning & PyTorch Fine-Tuning</h3>
-      <p>Design and implement end-to-end PyTorch pipelines, fine-tuning models on custom datasets for rapid prototyping and deployment.</p>
-    </div>
-    <div class="card">
-      <h3>LLM Fine-Tuning & Context Engineering</h3>
-      <p>Design and execute advanced LLM fine-tuning workflows; craft and optimize prompt & context strategies to maximize model performance.</p>
+      <h3>Transfer Learning & Fine-Tuning</h3>
+      <p>Implement end-to-end PyTorch pipelines for model fine-tuning, and advanced LLM fine-tuning and context engineering to adapt large models to your data.</p>
     </div>
     <div class="card">
       <h3>Advanced NLP & Agents</h3>
-      <p>Build scalable text processing with Transformers, Langgraph, A2A communication, and MCP pipelines—bringing true agentic AI to your workflows.</p>
+      <p>Build scalable text workflows with Transformers, Langgraph, A2A communication, and MCP pipelines—bringing true agentic AI to your applications.</p>
     </div>
     <div class="card">
       <h3>AI Microservices</h3>
-      <p>Containerize AI workloads with Docker, orchestrate with Kubernetes on Azure & GCP, and deliver robust, production-scale services.</p>
+      <p>Containerize AI workloads with Docker, orchestrate with Kubernetes on Azure & GCP, and deliver robust production-scale services.</p>
     </div>
   </section>
 
