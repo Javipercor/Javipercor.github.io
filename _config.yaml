@@ -1,0 +1,7 @@
+title: "Javier Pérez-Córdova"
+description: "AI, transfer learning, LLMs & more"
+baseurl: ""            # if you're serving at username.github.io/repo, set "/repo"
+url: "https://javipercor.github.io"
+theme: minima          # or any other Jekyll theme
+plugins:
+  - jekyll-feed
