@@ -11,29 +11,27 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Roboto', sans-serif;
-      color: #111;
-      background: #fff;
+      background: #f4f4f4;
+      color: #2c3e50;
       line-height: 1.6;
     }
-    a { color: #111; text-decoration: none; }
+    a { color: #18bc9c; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* Header */
     header {
       display: flex;
       justify-content: flex-end;
       padding: 1rem 2rem;
-      background: #f9f9f9;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
     header a {
       margin-left: 1.5rem;
+      font-weight: 700;
       text-transform: uppercase;
       font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
     }
 
-    /* Main content */
     main {
       max-width: 800px;
       margin: 2rem auto;
@@ -42,42 +40,42 @@
     .card {
       background: #fff;
       padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       margin-bottom: 2rem;
     }
     .card h2 {
       margin-bottom: 1rem;
       font-size: 1.5rem;
-      color: #111;
+      color: #18bc9c;
+      border-bottom: 2px solid #18bc9c;
+      display: inline-block;
+      padding-bottom: 0.25rem;
     }
     .card p {
       margin-bottom: 1rem;
-      color: #333;
     }
     .card ul {
       list-style: none;
       padding-left: 1rem;
     }
     .card ul li {
-      margin-bottom: 0.5rem;
       position: relative;
+      margin-bottom: 0.5rem;
       padding-left: 0.8rem;
-      color: #333;
     }
     .card ul li::before {
       content: "•";
       position: absolute;
       left: 0;
-      color: #111;
+      color: #18bc9c;
     }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.8rem;
-      color: #666;
+      color: #888;
     }
   </style>
 </head>
@@ -85,6 +83,7 @@
   <header>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
+    <a href="blog/">Blog</a>
   </header>
 
   <main>
@@ -99,18 +98,20 @@
     <div class="card" id="experience">
       <h2>Experience</h2>
       <ul>
-        <li>
-          <strong>Turing Challenge S.L. — Principal Data Scientist</strong> (Mar 2021 – Present)<br>
-          • Lead technical design, pre-sales, and stakeholder coordination.<br>
-          • Develop and deploy AI microservices (Docker, Azure, GCP, Kubernetes).<br>
-          • <em>Transfer Learning & Fine-Tuning:</em> End-to-end PyTorch pipelines and advanced LLM fine-tuning & context engineering.<br>
-          • <em>Advanced NLP & Agents:</em> Transformers, Langgraph, A2A communication & MCP pipelines.<br>
-          • Tabular data workflows (Python, Power BI, Databricks) and reinforcement learning in industrial applications.
+        <li><strong>Turing Challenge S.L. — Principal Data Scientist</strong> (Mar 2021 – Present)
+          <ul>
+            <li>Lead technical design, pre-sales, and stakeholder coordination.</li>
+            <li>Develop and deploy AI microservices (Docker, Azure, GCP, Kubernetes).</li>
+            <li><em>Transfer & Fine-Tuning:</em> End-to-end PyTorch pipelines + LLM fine-tuning & context engineering.</li>
+            <li><em>Advanced NLP & Agents:</em> Transformers, Langgraph, A2A communication & MCP pipelines.</li>
+            <li>Tabular data workflows (Python, Power BI, Databricks) & reinforcement learning.</li>
+          </ul>
         </li>
-        <li>
-          <strong>Quolutions S.L. — Data Scientist</strong> (Sep 2019 – Mar 2021)<br>
-          • Pattern recognition & process optimization using Azure ML and Python.<br>
-          • NLP pipelines for image & text analysis with Keras, TensorFlow, OpenCV, and Scikit-learn.
+        <li><strong>Quolutions S.L. — Data Scientist</strong> (Sep 2019 – Mar 2021)
+          <ul>
+            <li>Pattern recognition & process optimization using Azure ML and Python.</li>
+            <li>NLP pipelines for image & text analysis with Keras, TensorFlow, OpenCV, Scikit-learn.</li>
+          </ul>
         </li>
       </ul>
     </div>
@@ -118,8 +119,8 @@
     <div class="card" id="education-certificates">
       <h2>Education &amp; Certificates</h2>
       <ul>
-        <li><strong>MSc in Data Science</strong>, Universitat Oberta de Catalunya (09 2019 – 02 2021)</li>
-        <li><strong>MSc in Biomedical Engineering</strong>, Technical University of Madrid (09 2018 – 07 2019)</li>
+        <li><strong>MSc in Data Science</strong>, UOC (09 2019 – 02 2021)</li>
+        <li><strong>MSc in Biomedical Engineering</strong>, UPM (09 2018 – 07 2019)</li>
         <li><strong>Telecommunication Engineering</strong>, Universidade de Vigo (09 2012 – 06 2018)</li>
         <li>Azure AI Engineer Associate (2024)</li>
         <li>Azure Data Scientist Associate (2023)</li>
