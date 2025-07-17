@@ -7,185 +7,129 @@
   <title>Javier Pérez-Córdova</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --dark-bg: #1a1a2e;
-      --accent: #e94560;
-      --light-text: #f0f0f0;
-      --muted-text: #cccccc;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    /* Base styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Roboto', sans-serif;
-      background: var(--dark-bg);
-      color: var(--light-text);
+      color: #111;
+      background: #fff;
       line-height: 1.6;
-      min-height: 100vh;
     }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: #111; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
+    /* Header */
     header {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: flex-end;
       padding: 1rem 2rem;
-      background: transparent;
+      background: #f9f9f9;
     }
-    header h1 {
-      font-size: 1.8rem;
-      color: var(--light-text);
-    }
-    header nav a {
-      margin-left: 1rem;
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: var(--light-text);
+    header a {
+      margin-left: 1.5rem;
       text-transform: uppercase;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
     }
 
+    /* Main content */
     main {
-      max-width: 900px;
+      max-width: 800px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
-    section {
-      background: #16213e;
+    .card {
+      background: #fff;
       padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-      margin-bottom: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
     }
-    section h2 {
+    .card h2 {
       margin-bottom: 1rem;
-      color: var(--accent);
-      font-size: 1.4rem;
-      border-bottom: 2px solid var(--accent);
-      display: inline-block;
-      padding-bottom: 0.25rem;
+      font-size: 1.5rem;
+      color: #111;
     }
-    section#experience > div {
-      margin-bottom: 1.5rem;
+    .card p {
+      margin-bottom: 1rem;
+      color: #333;
     }
-    section#experience h3 {
-      margin-bottom: 0.5rem;
-      color: var(--light-text);
-      font-size: 1.2rem;
-    }
-    ul {
+    .card ul {
       list-style: none;
       padding-left: 1rem;
     }
-    ul li::before {
-      content: "• ";
-      color: var(--accent);
-    }
-    ul li {
+    .card ul li {
       margin-bottom: 0.5rem;
-      color: var(--muted-text);
-      font-size: 0.95rem;
+      position: relative;
+      padding-left: 0.8rem;
+      color: #333;
+    }
+    .card ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #111;
     }
 
+    /* Footer */
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: var(--muted-text);
+      font-size: 0.8rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Javier Pérez-Córdova</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-    </nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
   </header>
 
   <main>
-    <section id="about">
+    <div class="card" id="about">
       <h2>About Me</h2>
-      <p>
-        Proactive and adaptable AI professional with a results-oriented mindset. Skilled at explaining complex technical concepts to both business and technical audiences. Passionate about basketball, team sports, adventure activities, and lifelong learning across technology, history, philosophy, and economics.
-      </p>
-      <p>
-        <strong>Languages:</strong> English (C1-CAE), Spanish (Native), Galician (Native)<br />
-        <strong>Contact:</strong> <a href="https://www.linkedin.com/in/javipercor" target="_blank">LinkedIn: javipercor</a>
-      </p>
-      <p>
-        <strong>Links:</strong>
-        <a href="https://github.com/javipercor" target="_blank">GitHub</a> •
-        <a href="https://turingchallenge.com" target="_blank">TuringChallenge.com</a>
-      </p>
-    </section>
+      <p>Proactive and adaptable AI professional with a results-oriented mindset. Skilled at explaining complex technical concepts to both business and technical audiences. Passionate about basketball, team sports, adventure activities, and lifelong learning across technology, history, philosophy, and economics.</p>
+      <p><strong>Languages:</strong> English (C1-CAE), Spanish (Native), Galician (Native)</p>
+      <p><strong>Contact:</strong> <a href="https://www.linkedin.com/in/javipercor" target="_blank">LinkedIn: javipercor</a></p>
+      <p><strong>Links:</strong> <a href="https://github.com/javipercor" target="_blank">GitHub</a> • <a href="https://turingchallenge.com" target="_blank">TuringChallenge.com</a></p>
+    </div>
 
-    <section id="experience">
+    <div class="card" id="experience">
       <h2>Experience</h2>
-
-      <div>
-        <h3>Turing Challenge S.L.</h3>
-        <p><em>Principal Data Scientist</em> | Mar 2021 – Present</p>
-        <ul>
-          <li>Lead technical design, pre-sales, and stakeholder coordination.</li>
-          <li>Develop and deploy AI microservices (Docker, Azure, GCP, Kubernetes).</li>
-          <li>
-            <strong>Computer Vision & Transfer Learning:</strong>
-            Designed and implemented end-to-end PyTorch pipelines, fine-tuning ResNet, EfficientNet, and YOLO on custom datasets; integrated photogrammetry workflows and real-time video analytics with NVIDIA DeepStream.
-          </li>
-          <li>
-            <strong>Advanced NLP & Multi-Agent Systems:</strong>
-            Built NLP solutions with Transformers, Langgraph, and Semantic Kernel; architected A2A communication frameworks and Multi-Channel Processing (MCP) pipelines.
-          </li>
-          <li>Tabular data workflows with Python, Power BI, Databricks; reinforcement learning in industrial applications.</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>Quolutions S.L.</h3>
-        <p><em>Data Scientist</em> | Sep 2019 – Mar 2021</p>
-        <ul>
-          <li>
-            <strong>Pattern Recognition & Process Optimization:</strong>
-            Developed anomaly detection and optimization algorithms for industrial processes using Azure ML and Python.
-          </li>
-          <li>
-            <strong>NLP for Image & Text Analysis:</strong>
-            Created information-extraction pipelines with Keras, TensorFlow, OpenCV, and Scikit-learn.
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="education">
-      <h2>Education</h2>
       <ul>
-        <li><strong>MSc in Data Science</strong>, UOC (09-2019 – 02-2021)</li>
-        <li><strong>MSc in Biomedical Engineering</strong>, UPM (09-2018 – 07-2019)</li>
-        <li><strong>Telecommunication Engineering</strong>, Universidade de Vigo (09-2012 – 06-2018)</li>
+        <li>
+          <strong>Turing Challenge S.L. — Principal Data Scientist</strong> (Mar 2021 – Present)<br>
+          • Lead technical design, pre-sales, and stakeholder coordination.<br>
+          • Develop and deploy AI microservices (Docker, Azure, GCP, Kubernetes).<br>
+          • <em>Transfer Learning & Fine-Tuning:</em> End-to-end PyTorch pipelines and advanced LLM fine-tuning & context engineering.<br>
+          • <em>Advanced NLP & Agents:</em> Transformers, Langgraph, A2A communication & MCP pipelines.<br>
+          • Tabular data workflows (Python, Power BI, Databricks) and reinforcement learning in industrial applications.
+        </li>
+        <li>
+          <strong>Quolutions S.L. — Data Scientist</strong> (Sep 2019 – Mar 2021)<br>
+          • Pattern recognition & process optimization using Azure ML and Python.<br>
+          • NLP pipelines for image & text analysis with Keras, TensorFlow, OpenCV, and Scikit-learn.
+        </li>
       </ul>
-    </section>
+    </div>
 
-    <section id="certificates">
-      <h2>Certificates</h2>
+    <div class="card" id="education-certificates">
+      <h2>Education &amp; Certificates</h2>
       <ul>
+        <li><strong>MSc in Data Science</strong>, Universitat Oberta de Catalunya (09 2019 – 02 2021)</li>
+        <li><strong>MSc in Biomedical Engineering</strong>, Technical University of Madrid (09 2018 – 07 2019)</li>
+        <li><strong>Telecommunication Engineering</strong>, Universidade de Vigo (09 2012 – 06 2018)</li>
         <li>Azure AI Engineer Associate (2024)</li>
         <li>Azure Data Scientist Associate (2023)</li>
-        <li>TensorFlow: Advanced Techniques Specialization (2020)</li>
-        <li>Deep Learning Specialization (2020)</li>
+        <li>TensorFlow: Advanced Techniques (2020)</li>
+        <li>Deep Learning (2020)</li>
         <li>NLP Specialization (2020)</li>
         <li>Google Professional ML Engineer (in progress)</li>
         <li>Azure Solutions Architect Expert (in progress)</li>
       </ul>
-    </section>
+    </div>
   </main>
 
   <footer>
