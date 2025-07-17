@@ -1,0 +1,29 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+
+<header>
+  <a href="{{ "/" | relative_url }}">Home</a>
+  <a href="{{ "/about.html" | relative_url }}">About</a>
+  <a href="{{ "/blog/" | relative_url }}">Blog</a>
+</header>
+
+<main>
+  <h1>Blog</h1>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+          — {{ post.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</main>
+
+<footer>
+  &copy; 2025 Javier Pérez-Córdova — Built with 🐙 and HTML
+</footer>
