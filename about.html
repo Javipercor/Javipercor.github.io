@@ -1,0 +1,166 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Javier Pérez-Córdova</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --accent: #18bc9c;
+      --light: #ecf0f1;
+      --dark: #34495e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--light);
+      color: var(--primary);
+      line-height: 1.6;
+      padding: 2rem;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    header nav a {
+      margin-left: 1rem;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    section {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
+    }
+    section h2 {
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+    section#experience > div {
+      margin-bottom: 1.5rem;
+    }
+    section#experience h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding-top: 2rem;
+      font-size: 0.9rem;
+      color: var(--dark);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Javier Pérez-Córdova</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Proactive and adaptable AI professional with a results-oriented mindset.
+        Skilled at explaining complex technical concepts to both business and technical audiences.
+        Passionate about basketball, team sports, adventure activities, and lifelong learning across
+        technology, history, philosophy, and economics.
+      </p>
+      <p>
+        <strong>Languages:</strong> English (C1-CAE), Spanish (Native), Galician (Native)<br />
+        <strong>Contact:</strong> javipercor@outlook.com
+      </p>
+      <p>
+        <strong>Links:</strong>
+        <a href="https://github.com/javipercor" target="_blank">GitHub</a> •
+        <a href="https://turingchallenge.com" target="_blank">TuringChallenge.com</a>
+      </p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div>
+        <h3>Turing Challenge S.L.</h3>
+        <p><em>Principal Data Scientist</em> | Mar 2021 – Present</p>
+        <ul>
+          <li>Lead technical design, pre-sales, and stakeholder coordination.</li>
+          <li>Develop and deploy AI microservices (Docker, Azure, GCP, Kubernetes).</li>
+          <li>
+            <strong>Computer Vision & Transfer Learning:</strong>
+            Designed and implemented end-to-end PyTorch pipelines, fine-tuning ResNet, EfficientNet, and YOLO on custom datasets;
+            integrated photogrammetry workflows and real-time video analytics with NVIDIA DeepStream.
+          </li>
+          <li>
+            <strong>Advanced NLP & Multi-Agent Systems:</strong>
+            Built NLP solutions with Transformers, Langgraph, and Semantic Kernel;
+            architected A2A communication frameworks and Multi-Channel Processing (MCP) pipelines.
+          </li>
+          <li>Tabular data workflows with Python, Power BI, Databricks; reinforcement learning in industrial applications.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Quolutions S.L.</h3>
+        <p><em>Data Scientist</em> | Sep 2019 – Mar 2021</p>
+        <ul>
+          <li>
+            <strong>Pattern Recognition & Process Optimization:</strong>
+            Developed anomaly detection and optimization algorithms for industrial processes using AzureML and Python.
+          </li>
+          <li>
+            <strong>NLP for Image & Text Analysis:</strong>
+            Created information-extraction pipelines with Keras, TensorFlow, OpenCV, and Scikit-learn.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>MSc in Data Science</strong>, UOC (09-2019 – 02-2021)</li>
+        <li><strong>MSc in Biomedical Engineering</strong>, UPM (09-2018 – 07-2019)</li>
+        <li><strong>Telecommunication Engineering</strong>, Universidade de Vigo (09-2012 – 06-2018)</li>
+      </ul>
+    </section>
+
+    <section id="certificates">
+      <h2>Certificates</h2>
+      <ul>
+        <li>Azure AI Engineer Associate (2024)</li>
+        <li>Azure Data Scientist Associate (2023)</li>
+        <li>TensorFlow: Advanced Techniques Specialization (2020)</li>
+        <li>Deep Learning Specialization (2020)</li>
+        <li>NLP Specialization (2020)</li>
+        <li>Google Professional ML Engineer (in progress)</li>
+        <li>Azure Solutions Architect Expert (in progress)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Javier Pérez-Córdova — Built with 🐙 and HTML
+  </footer>
+</body>
+</html>
