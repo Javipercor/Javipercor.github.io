@@ -4,54 +4,100 @@
   <meta charset="UTF-8">
   <title>Unlock the Future with AI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    /* Base styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0; padding: 0;
-      font-family: system-ui, sans-serif;
+      font-family: 'Roboto', sans-serif;
       color: #111;
       background: #fff;
+      line-height: 1.6;
     }
+    a { color: #111; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header */
     header {
-      display: flex; justify-content: flex-end;
+      display: flex;
+      justify-content: flex-end;
       padding: 1rem 2rem;
-      background: #f8f8f8;
+      background: #f9f9f9;
     }
     header a {
-      margin-left: 1rem;
+      margin-left: 1.5rem;
       text-transform: uppercase;
       font-size: 0.85rem;
-      color: #111;
-      text-decoration: none;
+      font-weight: 700;
       letter-spacing: 0.05em;
     }
+
+    /* Hero section */
     .hero {
       height: calc(100vh - 60px);
-      display: flex; flex-direction: column;
-      justify-content: center; align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
       padding: 0 1rem;
     }
     .hero h1 {
-      font-size: 3rem; margin-bottom: 0.5rem;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
     }
     .hero p {
-      font-size: 1.1rem; margin-bottom: 1.5rem;
-      max-width: 600px; line-height: 1.5;
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 600px;
+      margin-bottom: 1.5rem;
     }
     .hero a.button {
       padding: 0.75rem 1.5rem;
       border: 2px solid #111;
-      text-decoration: none;
-      font-weight: bold;
-      color: #111;
-      transition: background 0.2s;
+      font-weight: 700;
+      transition: background 0.2s, color 0.2s;
     }
     .hero a.button:hover {
-      background: #111; color: #fff;
+      background: #111;
+      color: #fff;
     }
+
+    /* Features/cards */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+      color: #111;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    /* Footer */
     footer {
-      text-align: center; padding: 2rem 1rem;
-      font-size: 0.8rem; color: #666;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.8rem;
+      color: #666;
     }
   </style>
 </head>
@@ -60,11 +106,34 @@
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
   </header>
+
   <section class="hero">
     <h1>Unlock the Future with AI</h1>
     <p>From transfer learning to multi-agent NLP systems, explore how intelligent solutions can transform industries.</p>
     <a href="about.html" class="button">Learn More</a>
   </section>
-  <footer>&copy; 2025 Javier Pérez-Córdova — Built with 🐙 and HTML</footer>
+
+  <section class="features">
+    <div class="card">
+      <h3>Transfer Learning & PyTorch Fine-Tuning</h3>
+      <p>Design and implement end-to-end PyTorch pipelines, fine-tuning models on custom datasets for rapid prototyping and deployment.</p>
+    </div>
+    <div class="card">
+      <h3>LLM Fine-Tuning & Context Engineering</h3>
+      <p>Design and execute advanced LLM fine-tuning workflows; craft and optimize prompt & context strategies to maximize model performance.</p>
+    </div>
+    <div class="card">
+      <h3>Advanced NLP & Agents</h3>
+      <p>Build scalable text processing with Transformers, Langgraph, A2A communication, and MCP pipelines—bringing true agentic AI to your workflows.</p>
+    </div>
+    <div class="card">
+      <h3>AI Microservices</h3>
+      <p>Containerize AI workloads with Docker, orchestrate with Kubernetes on Azure & GCP, and deliver robust, production-scale services.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Javier Pérez-Córdova — Built with 🐙 and HTML
+  </footer>
 </body>
 </html>
