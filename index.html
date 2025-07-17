@@ -1,55 +1,130 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to My GitHub Page</title>
+  <title>Unlock the Future with AI</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --dark-bg: #1a1a2e;
+      --accent: #e94560;
+      --light-text: #f0f0f0;
+      --muted-text: #cccccc;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
-      margin: 0;
-      padding: 0;
+      background: var(--dark-bg);
+      color: var(--light-text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
       display: flex;
-      align-items: center;
+      justify-content: flex-end;
+      padding: 1rem 2rem;
+    }
+    header a {
+      margin-left: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
       justify-content: center;
-      height: 100vh;
+      align-items: center;
       text-align: center;
+      height: 80vh;
+      padding: 0 1rem;
     }
-
-    .container {
-      background: white;
-      padding: 2rem 3rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-    }
-
-    h1 {
-      color: #333;
+    .hero h1 {
+      font-size: 3rem;
       margin-bottom: 1rem;
     }
-
-    p {
-      color: #555;
+    .hero p {
       font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: var(--muted-text);
+      max-width: 600px;
+    }
+    .hero a.button {
+      padding: 0.8rem 1.6rem;
+      background: var(--accent);
+      color: var(--light-text);
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    @media(min-width: 800px) {
+      .features { grid-template-columns: repeat(3,1fr); }
+    }
+    .card {
+      background: #16213e;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .card h3 {
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+    .card p {
+      color: var(--muted-text);
+      font-size: 0.95rem;
     }
 
     footer {
-      margin-top: 2rem;
+      text-align: center;
+      padding: 2rem;
       font-size: 0.9rem;
-      color: #888;
+      color: var(--muted-text);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Hello, World!</h1>
-    <p>I'm hosted with <strong>GitHub Pages</strong>.</p>
-    <footer>
-      &copy; 2025 javipercor — Built with 🐙 and HTML
-    </footer>
-  </div>
+  <header>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+  </header>
+
+  <section class="hero">
+    <h1>Unlock the Future with AI</h1>
+    <p>From cutting-edge transfer learning to multi-agent NLP systems, explore how intelligent solutions can transform industries.</p>
+    <a href="about.html" class="button">Learn More</a>
+  </section>
+
+  <section class="features">
+    <div class="card">
+      <h3>Transfer Learning</h3>
+      <p>Fine-tune state-of-the-art PyTorch models (ResNet, EfficientNet, YOLO) on your custom data for rapid prototyping and deployment.</p>
+    </div>
+    <div class="card">
+      <h3>Advanced NLP & Agents</h3>
+      <p>Build scalable text processing with Transformers, Langgraph, A2A communication, and MCP pipelines—bringing true agentic AI to your workflows.</p>
+    </div>
+    <div class="card">
+      <h3>AI Microservices</h3>
+      <p>Containerized workloads in Docker, orchestrated with Kubernetes on Azure & GCP, delivering robust, scalable AI at production scale.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Javier Pérez-Córdova — Built with 🐙 and HTML
+  </footer>
 </body>
 </html>
