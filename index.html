@@ -1,4 +1,3 @@
-<!-- index.html -->
 ---
 layout: default
 title: Unlock the Future with AI
@@ -7,75 +6,107 @@ title: Unlock the Future with AI
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    /* Base */
+    /* Base styles */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Roboto', sans-serif;
-      background: #f4f4f4;
-      color: #2c3e50;
+      color: #111;
+      background: #fff;
       line-height: 1.6;
     }
-    a { color: #18bc9c; text-decoration: none; }
+    a { color: #111; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* Header nav */
-    header {
+    /* Hero section */
+    .hero {
+      height: calc(100vh - 0px);
       display: flex;
-      justify-content: flex-end;
-      padding: 1rem 2rem;
-      background: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 1rem;
     }
-    header a {
-      margin-left: 1.5rem;
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 600px;
+      margin-bottom: 1.5rem;
+    }
+    .hero a.button {
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #111;
       font-weight: 700;
-      text-transform: uppercase;
-      font-size: 0.85rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    .hero a.button:hover {
+      background: #111;
+      color: #fff;
     }
 
-    /* Page container */
-    main {
-      max-width: 800px;
+    /* Features/cards */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
-
-    /* Card style */
     .card {
       background: #fff;
       padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
     }
-    .card h2 {
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+      color: #111;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    /* Blog preview */
+    .blog-preview {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    .blog-preview h2 {
+      font-size: 2rem;
       margin-bottom: 1rem;
-      font-size: 1.5rem;
-      color: #18bc9c;
-      border-bottom: 2px solid #18bc9c;
-      display: inline-block;
-      padding-bottom: 0.25rem;
+      color: #111;
     }
-    .card p { margin-bottom: 1rem; }
-    .card ul {
+    .blog-preview ul {
       list-style: none;
-      padding-left: 1rem;
+      padding-left: 0;
     }
-    .card ul li {
-      position: relative;
-      margin-bottom: 0.5rem;
-      padding-left: 0.8rem;
+    .blog-preview li {
+      margin-bottom: 0.75rem;
     }
-    .card ul li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #18bc9c;
+    .blog-preview a {
+      font-weight: 700;
+    }
+    .blog-preview time {
+      color: #555;
+      font-size: 0.9rem;
+      margin-right: 0.5rem;
     }
 
     /* Footer */
@@ -83,50 +114,45 @@ title: Unlock the Future with AI
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.8rem;
-      color: #888;
+      color: #666;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <a href="{{ '/' | relative_url }}">Home</a>
-    <a href="{{ '/about.html' | relative_url }}">About</a>
-    <a href="{{ '/blog/' | relative_url }}">Blog</a>
-  </header>
+  <section class="hero">
+    <h1>Unlock the Future with AI</h1>
+    <p>From transfer learning to multi-agent NLP systems, explore how intelligent solutions can transform industries.</p>
+    <a href="{{ "/about.html" | relative_url }}" class="button">Learn More</a>
+  </section>
 
-  <main>
-    <!-- Hero card -->
-    <div class="card" id="hero">
-      <h2>Unlock the Future with AI</h2>
-      <p>From transfer learning to multi-agent NLP systems, explore how intelligent solutions can transform industries.</p>
-      <p><a href="{{ '/about.html' | relative_url }}">Learn More →</a></p>
+  <section class="features">
+    <div class="card">
+      <h3>Transfer Learning & Fine-Tuning</h3>
+      <p>Implement end-to-end PyTorch pipelines and advanced LLM fine-tuning & context engineering to adapt large models to your data.</p>
     </div>
+    <div class="card">
+      <h3>Advanced NLP & Agents</h3>
+      <p>Build scalable text workflows with Transformers, Langgraph, A2A communication, and MCP pipelines—bringing true agentic AI to your applications.</p>
+    </div>
+    <div class="card">
+      <h3>AI Microservices</h3>
+      <p>Containerize AI workloads with Docker, orchestrate with Kubernetes on Azure & GCP, and deliver robust production-scale services.</p>
+    </div>
+  </section>
 
-    <!-- Features card -->
-    <div class="card" id="features">
-      <h2>Core Capabilities</h2>
-      <ul>
-        <li><strong>Transfer & Fine-Tuning:</strong> End-to-end PyTorch pipelines + advanced LLM fine-tuning & context engineering.</li>
-        <li><strong>Advanced NLP & Agents:</strong> Transformers, Langgraph, A2A communication & MCP pipelines.</li>
-        <li><strong>AI Microservices:</strong> Containerized Docker workloads on Kubernetes (Azure & GCP).</li>
-      </ul>
-    </div>
-
-    <!-- Blog preview card -->
-    <div class="card blog-preview">
-      <h2>Latest Posts</h2>
-      <ul>
-        {% for post in site.posts limit:3 %}
-        <li>
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-      <p><a href="{{ '/blog/' | relative_url }}">View all posts →</a></p>
-    </div>
-  </main>
+  <section class="blog-preview">
+    <h2>Latest Posts</h2>
+    <ul>
+      {% for post in site.posts limit:3 %}
+      <li>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <p><a href="{{ "/blog/" | relative_url }}">View all posts →</a></p>
+  </section>
 
   <footer>
     &copy; 2025 Javier Pérez-Córdova — Built with 🐙 and HTML
