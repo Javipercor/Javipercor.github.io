@@ -1,5 +1,4 @@
-title: "Javier Pérez-Córdova"
-description: "Data Science, Ai Engineering & more"
+
 baseurl: ""            # if you're serving at username.github.io/repo, set "/repo"
 url: "https://javipercor.github.io"
 theme: minima          # or any other Jekyll theme
